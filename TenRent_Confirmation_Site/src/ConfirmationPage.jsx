@@ -5,7 +5,7 @@ export default function ConfirmationPage() {
 
   useEffect(() => {
     // Check if the URL has a hash (success) or query parameters (failure)
-    if (window.location.hash === "#") {
+    if (window.location.hash.startsWith("#access_token")) {
       setStatus("success");
     } else {
       setStatus("error");
